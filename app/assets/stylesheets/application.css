@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+.validate{
+  height: 30px;
+  width: 30px;
+}
+.form-container{
+  margin:100px;
+}
+
+.task-container{
+  margin: 40px;
+}

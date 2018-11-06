@@ -1,0 +1,12 @@
+<h1>My Tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <% if task.completed %>
+      <li><img src="https://t3.ftcdn.net/jpg/00/32/56/14/240_F_32561443_i5H38om3pZryUHWvTdvnwaOk2y1NtTaS.jpg" alt="validate" class="validate"> <%= link_to task.title, task_path(task) %></li>
+    <% else %>
+      <li><%= link_to task.title, task_path(task) %></li>
+      <% end %>
+  <% end %>
+</ul>
+
+<%= link_to "Add a task", tasks_new_path %>

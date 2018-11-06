@@ -1,0 +1,14 @@
+<div class="task-container">
+<h1><%= @task.title %></h1>
+<div class="datails-container"><%= @task.details %></div>
+<% if @task.completed %>
+  <p><img src="https://t3.ftcdn.net/jpg/00/32/56/14/240_F_32561443_i5H38om3pZryUHWvTdvnwaOk2y1NtTaS.jpg" alt="validate" class="validate"> This task is completed</p>
+<% else %>
+  <p>This task is not completed</p>
+<% end %>
+<p><%= link_to "Delete", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
+<p><%= link_to "Edit", edit_task_path(@task) %></p>
+<p><%= link_to "Back to list", tasks_path %></p>
+</div>
